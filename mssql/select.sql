@@ -26,3 +26,5 @@ SELECT * FROM Sample.dbo.Employee ORDER BY Age
 SELECT * FROM Sample.dbo.Employee ORDER BY Age DESC
 -- 一部検索
 SELECT TOP 10 * FROM Sample.dbo.Employee ORDER BY Name
+-- 副問い合わせ
+SELECT * FROM dbo.Artist WHERE ArtistId IN (SELECT ArtistId FROM dbo.Album)
